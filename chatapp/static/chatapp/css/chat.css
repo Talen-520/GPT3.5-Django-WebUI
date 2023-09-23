@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: "League Spartan", system-ui, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    background-color: #212121;
+    color: #ddd;
+}
+
+/* Apply styling to the chat container */
+#chat-container {
+    max-width: 1000px; /* Set a maximum width to avoid it becoming too wide on larger screens */
+    width: 90%; /* Use a percentage width for responsiveness */
+    background-color: #2b2b2b;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+}
+
+/* Style the chat messages inside the container */
+#chat-box {
+    --flow-space: 0.5em;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    flex: 1 1 14rem;
+    padding: 1.5em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.25em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    /*border: 1px solid #eceff133;
+    border-radius: 15px;*/
+}
+
+/* Style the user input form and button */
+#chat-form {
+    margin-top: 10px;
+    
+}
+
+#user-input {
+    width: 90%;
+    padding: 10px;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+    
+}
+
+#user-input:focus {
+    outline: none;
+    color:#eceff1
+}
+
+#chat-submit {
+    display: block;
+    align-self: end;
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0d0d0d;
+    padding: 0.7em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+/* Apply responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #chat-container {
+        width: 100%; /* Use full width on smaller screens */
+        margin: 0; /* Remove margin to center the chat container */
+        border: none; /* Remove the border for a cleaner look */
+    }
+}
